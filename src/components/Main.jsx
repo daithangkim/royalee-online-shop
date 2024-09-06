@@ -6,7 +6,7 @@ import ProductListFeature from "../features/ProductList";
 const Main = () => {
     return (
         <div style={{ margin: 0, padding: 0, width: '100%', height: '100vh' }}>
-            <Container
+            <Box
                 sx={{
                     backgroundColor: '#ffffff',
                     width: '100%',
@@ -28,7 +28,7 @@ const Main = () => {
                 <Box>
                     <ProductListFeature />
                 </Box>
-            </Container>
+            </Box>
         </div>
     );
 };

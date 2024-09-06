@@ -1,3 +1,5 @@
+import {Card, CardContent, CardMedia} from "@mui/material";
+
 const ProductCard = ({ product }) => {
   return (
     <Card>

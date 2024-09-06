@@ -13,8 +13,10 @@ const Header = () => {
                 <Toolbar sx={{display: 'flex', lineHeight: '4', justifyContent: 'space-between'}}>
                     <Logo/>
                     <SearchBar/>
-                    <ProfileButton/>
-                    <ShoppingCartFeature/>
+                    <Box>
+                        <ProfileButton/>
+                        <ShoppingCartFeature/>
+                    </Box>
                 </Toolbar>
             </AppBar>
 
@@ -23,7 +25,7 @@ const Header = () => {
                 {/* Buttons */}
                 <Box sx={{display: 'flex', gap: 0.5}}>
                     {['Categories', 'Bestseller', 'New Products', 'Contact'].map((text, index) => (
-                        <Button key={index} color="inherit" sx={{fontSize: '0.6rem', minWidth: 'auto'}}>
+                        <Button key={index} color="inherit" sx={{fontSize: '1rem', minWidth: 'auto'}}>
                             {text}
                         </Button>
                     ))}
