@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import { AppBar, Box, Container, Tab, Tabs, Typography } from "@mui/material";
+import React, {useState} from "react";
+import {AppBar, Box, Tab, Tabs, Typography} from "@mui/material";
 import AdSliderFeature from "../features/AdSlider/AdSlider";
 import ProductListFeature from "../features/ProductList";
-import { ArrowDropDown } from "@mui/icons-material";
 
 // CustomTabPanel Component
-const CustomTabPanel = ({ value, index, children }) => {
+const CustomTabPanel = ({value, index, children}) => {
     return (
         <div role="tabpanel" hidden={value !== index}>
             {value === index && (
@@ -25,58 +24,61 @@ const Main = () => {
     };
 
     return (
-        <div style={{ margin: 0, padding: 0, width: '100%', height: '100vh' }}>
+        <div style={{margin: 0, padding: 0, width: '100%', height: '100vh'}}>
             <Box
                 sx={{
                     backgroundColor: '#ffffff',
                     width: '100%',
                     height: '100%',
-                    maxWidth: '100%', // Override default max-width
-                    padding: 0, // Remove default padding
-                    margin: 0, // Remove default margin
                     display: 'flex',
                     flexDirection: 'column',
                 }}
             >
                 {/* Top AppBar with Tabs */}
-                <AppBar position="static" sx={{ backgroundColor: 'rgb(5,20,54)' }}>
+                <AppBar position="static" sx={{backgroundColor: 'rgb(5,20,54)'}}>
                     <Tabs
                         value={tabIndex}
                         onChange={handleTabChange}
-                        sx={{ display: 'flex', justifyContent: 'space-around' }}
-                        TabIndicatorProps={{ style: { backgroundColor: '#ffffff' } }} // Customize indicator color
-                    >
-                        <Tab label={<><ArrowDropDown /> Home</>} sx={{ fontSize: '1rem', color: '#ffffff' }} />
-                        <Tab label="Bestseller" sx={{ fontSize: '1rem', color: '#ffffff' }} />
-                        <Tab label="New Products" sx={{ fontSize: '1rem', color: '#ffffff' }} />
-                        <Tab label="Contact" sx={{ fontSize: '1rem', color: '#ffffff' }} />
+                        sx={{display: 'flex', justifyContent: 'space-around'}}
+                        TabIndicatorProps={{style: {backgroundColor: '#ffffff'}}}>
+                        {["Home", "Bestseller", "New Products", "Contact"].map((label, index) => (
+                            <Tab key={index} label={label} sx={{fontSize: '1rem', color: '#ffffff'}}/>
+                        ))}
                     </Tabs>
                 </AppBar>
 
-                {/* Tab Panels for different content */}
+                {/* Home tab */}
                 <CustomTabPanel value={tabIndex} index={0}>
-                    {/* Home tab content */}
-                    <Box sx={{ padding: '10px' }}>
-                        <AdSliderFeature />
+                    <Typography variant="h4">Sale!!!</Typography>
+                    <Box sx={{padding: '10px'}}>
+                        <AdSliderFeature/>
                     </Box>
                     <Box>
-                        <ProductListFeature />
+                        <ProductListFeature/>
                     </Box>
                 </CustomTabPanel>
 
+                {/* Bestseller tab */}
                 <CustomTabPanel value={tabIndex} index={1}>
-                    {/* Bestseller tab content */}
-                    <Typography variant="h4">Bestseller Content</Typography>
+                    <Typography variant="h4">Bestseller</Typography>
+                    <Box>
+                        <ProductListFeature/>
+                    </Box>
                 </CustomTabPanel>
 
+                {/* New Products tab  */}
                 <CustomTabPanel value={tabIndex} index={2}>
-                    {/* New Products tab content */}
-                    <Typography variant="h4">New Products Content</Typography>
+                    <Typography variant="h4">New Products</Typography>
+                    <Box>
+                        <ProductListFeature/>
+                    </Box>
+
                 </CustomTabPanel>
 
+                {/* Contact tab */}
                 <CustomTabPanel value={tabIndex} index={3}>
-                    {/* Contact tab content */}
                     <Typography variant="h4">Contact Us</Typography>
+
                 </CustomTabPanel>
             </Box>
         </div>
