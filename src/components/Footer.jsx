@@ -1,10 +1,9 @@
 import React from "react";
+import {Pagination} from "@mui/material";
 
 const Footer = () => {
     return (
-        <div>
-            Footer
-        </div>
+        <Pagination count={10}/>
     );
 };
 
