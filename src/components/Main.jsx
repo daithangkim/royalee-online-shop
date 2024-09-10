@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {AppBar, Box, Tab, Tabs, Typography} from "@mui/material";
 import AdSliderFeature from "../features/AdSlider/AdSlider";
 import ProductListFeature from "../features/ProductList";
+import ContactFeature from "../features/Contact/Contact";
 
 // CustomTabPanel Component
 const CustomTabPanel = ({value, index, children}) => {
@@ -29,9 +30,9 @@ const Main = () => {
                 sx={{
                     backgroundColor: '#ffffff',
                     width: '100%',
-                    height: '100%',
                     display: 'flex',
                     flexDirection: 'column',
+                    flex: 1,
                 }}
             >
                 {/* Top AppBar with Tabs */}
@@ -49,7 +50,6 @@ const Main = () => {
 
                 {/* Home tab */}
                 <CustomTabPanel value={tabIndex} index={0}>
-                    <Typography variant="h4">Sale!!!</Typography>
                     <Box sx={{padding: '10px'}}>
                         <AdSliderFeature/>
                     </Box>
@@ -78,7 +78,7 @@ const Main = () => {
                 {/* Contact tab */}
                 <CustomTabPanel value={tabIndex} index={3}>
                     <Typography variant="h4">Contact Us</Typography>
-
+                    <ContactFeature/>
                 </CustomTabPanel>
             </Box>
         </div>

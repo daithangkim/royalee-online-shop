@@ -11,27 +11,6 @@ import sonyWH from './ProductPhotos/SonyWH-1000.png';
 
 export const products = [
     {
-        "id": 1,
-        "name": "Echo Dot (5th Gen)",
-        "price": "$59.99",
-        "description": "Compact smart speaker with Alexa.",
-        "image": echoDot
-    },
-    {
-        "id": 2,
-        "name": "Fire TV Stick 4K",
-        "price": "$49.99",
-        "description": "Streaming media player with 4K Ultra HD.",
-        "image": fireTvStick
-    },
-    {
-        "id": 3,
-        "name": "Kindle Paperwhite",
-        "price": "$139.99",
-        "description": "Waterproof e-reader with a high-resolution display.",
-        "image": kindle
-    },
-    {
         "id": 4,
         "name": "Ring Video Doorbell Pro 2",
         "price": "$249.99",

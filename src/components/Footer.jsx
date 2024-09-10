@@ -1,10 +1,11 @@
 import React from "react";
-import {Pagination} from "@mui/material";
+import {Box, Typography} from "@mui/material";
+
 
 const Footer = () => {
     return (
-        <Pagination count={10}/>
-    );
+        <div>Footer</div>
+    )
 };
 
 export default Footer;
