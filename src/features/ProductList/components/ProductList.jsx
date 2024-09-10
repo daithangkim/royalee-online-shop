@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid } from '@mui/material';
 import ProductCard from './ProductCard';
-import products from './ProductDetails.jsx'; // Make sure the path is correct
+import products from '../../../assets/Product/ProductDetails.jsx';
 
 const ProductList = () => {
     return (
