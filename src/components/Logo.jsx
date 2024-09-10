@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from "@mui/material";
-import RoyalShopLogo from '../assets/RoyalShopLogo.png';
+import RoyalShopLogo from '../assets/Logo/RoyalShopLogo.png';
+import RoyalShopLogo2 from '../assets/Logo/img.png';
+
 
 const Logo = ({ onLogoClick }) => {
     return (

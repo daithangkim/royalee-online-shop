@@ -41,9 +41,9 @@ const Main = () => {
                         value={tabIndex}
                         onChange={handleTabChange}
                         sx={{display: 'flex', justifyContent: 'space-around'}}
-                        TabIndicatorProps={{style: {backgroundColor: '#ffffff'}}}>
+                        TabIndicatorProps={{style: {backgroundColor: '#9c7945'}}}>
                         {["Home", "Bestseller", "New Products", "Contact"].map((label, index) => (
-                            <Tab key={index} label={label} sx={{fontSize: '1rem', color: '#ffffff'}}/>
+                            <Tab key={index} label={label} sx={{fontSize: '1rem', color: '#9c7945'}}/>
                         ))}
                     </Tabs>
                 </AppBar>

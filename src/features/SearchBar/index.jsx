@@ -6,7 +6,7 @@ import AllCategory from "../AllCategory/AllCategory";
 
 const SearchBarFeature = () => {
     return (
-        <Box display="flex" alignItems="center" sx={{ width: '100%' }}>
+        <Box display="flex" alignItems="center" sx={{ width: '100%', height: '2%' }}>
             <AllCategory/>
             <SearchInputBase/>
             <SearchBar/>

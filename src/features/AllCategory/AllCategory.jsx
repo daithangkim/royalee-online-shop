@@ -21,13 +21,13 @@ const AllCategory = () => {
                 variant="contained"
                 onClick={handleClick}
                 sx={{
-                    backgroundColor: '#1d3670',
+                    backgroundColor: '#9c7945',
                     height: '34px',
                     padding: '20px 0',
                     color: 'white',
                     '&:hover': {
-                        backgroundColor: '#1d4170',
-                    },
+                        backgroundColor: 'rgba(156,121,69,0.85)',
+                    }
                 }}
             >
                 <ArrowDropDown/>All

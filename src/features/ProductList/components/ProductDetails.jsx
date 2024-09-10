@@ -1,13 +1,13 @@
-import echoDot from '../../../assets/ProductPhotos/echoDot.png';
-import airpods from '../../../assets/ProductPhotos/AirPods.png';
-import bose from '../../../assets/ProductPhotos/Bose.png';
-import fireTvStick from '../../../assets/ProductPhotos/FireTvStick.png';
-import instantPot from '../../../assets/ProductPhotos/InstantPot.png';
-import kindle from '../../../assets/ProductPhotos/kindlePaperwhite.png';
-import ninjaFoodDeluxe from '../../../assets/ProductPhotos/NinjaFoodDeluxe.png';
-import ringDoorbell from '../../../assets/ProductPhotos/ringDoorbell.png';
-import samsungTab8 from '../../../assets/ProductPhotos/SamsungTAb8.png';
-import sonyWH from '../../../assets/ProductPhotos/SonyWH-1000.png';
+import echoDot from '../../../assets/Product/ProductPhotos/echoDot.png';
+import airpods from '../../../assets/Product/ProductPhotos/AirPods.png';
+import bose from '../../../assets/Product/ProductPhotos/Bose.png';
+import fireTvStick from '../../../assets/Product/ProductPhotos/FireTvStick.png';
+import instantPot from '../../../assets/Product/ProductPhotos/InstantPot.png';
+import kindle from '../../../assets/Product/ProductPhotos/kindlePaperwhite.png';
+import ninjaFoodDeluxe from '../../../assets/Product/ProductPhotos/NinjaFoodDeluxe.png';
+import ringDoorbell from '../../../assets/Product/ProductPhotos/ringDoorbell.png';
+import samsungTab8 from '../../../assets/Product/ProductPhotos/SamsungTAb8.png';
+import sonyWH from '../../../assets/Product/ProductPhotos/SonyWH-1000.png';
 
 export const products = [
     {

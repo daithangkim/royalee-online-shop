@@ -10,7 +10,7 @@ const Header = () => {
         <AppBar position="static" sx={{backgroundColor: '#020c23'}}>
             <Toolbar sx={{display: 'flex', lineHeight: '4', justifyContent: 'space-between'}}>
                 <Logo/>
-                <Box display="flex" gap={0} variant="contained">
+                <Box display="flex" gap={0} variant="contained" >
                     <SearchBar/>
                 </Box>
                 <Box>

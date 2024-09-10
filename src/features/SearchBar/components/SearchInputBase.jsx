@@ -4,7 +4,7 @@ import {InputBase} from "@mui/material";
 const SearchInputBase = () => {
     return (
             <InputBase
-                placeholder="Suche RoyalShop.de"
+                placeholder="Search on royalee..."
                 sx={{
                     backgroundColor: 'white',
                     padding: '5px 10px',
