@@ -9,7 +9,7 @@ const SearchBar = () => {
             sx={{
                 backgroundColor: '#9c7945',
                 height: '34px',
-                padding: '0 20px',
+                padding: '0 16px',
                 borderRadius: '0 4px 4px 0',
                 color: 'white',
                 '&:hover': {

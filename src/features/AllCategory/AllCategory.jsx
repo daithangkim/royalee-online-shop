@@ -23,8 +23,9 @@ const AllCategory = () => {
                 sx={{
                     backgroundColor: '#9c7945',
                     height: '34px',
-                    padding: '20px 0',
+                    padding: '0 12px',
                     color: 'white',
+                    borderRadius: '4px 0 0 4px',
                     '&:hover': {
                         backgroundColor: 'rgba(156,121,69,0.85)',
                     }

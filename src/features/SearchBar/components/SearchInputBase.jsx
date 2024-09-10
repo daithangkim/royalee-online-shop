@@ -8,7 +8,6 @@ const SearchInputBase = () => {
                 sx={{
                     backgroundColor: 'white',
                     padding: '5px 10px',
-                    borderRadius: '4px 0 0 4px',
                     flexGrow: 1,
                     height: '34px',
                     '&:hover': {
