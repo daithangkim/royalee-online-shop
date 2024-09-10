@@ -77,7 +77,6 @@ const Main = () => {
 
                 {/* Contact tab */}
                 <CustomTabPanel value={tabIndex} index={3}>
-                    <Typography variant="h4">Contact Us</Typography>
                     <ContactFeature/>
                 </CustomTabPanel>
             </Box>

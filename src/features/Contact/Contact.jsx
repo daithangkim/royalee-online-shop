@@ -27,7 +27,7 @@ const Contact = () => {
                 Contact Us
             </Typography>
             <form onSubmit={handleSubmit}>
-                <FormControl fullWidth sx={{ marginBottom: 2 }}>
+                <FormControl fullWidth sx={{ marginBottom: 0.5 }}>
                     <InputLabel id="contact-reason-label">Reason for Contact</InputLabel>
                     <Select
                         labelId="contact-reason-label"
