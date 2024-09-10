@@ -1,10 +1,9 @@
 import React from "react";
 import {AppBar, Box, Toolbar} from "@mui/material";
-import Logo from "./Logo";
 import SearchBar from "../features/SearchBar";
 import ShoppingCartFeature from "../features/ShoppingCard";
 import ProfileButton from "../features/Profile/ProfileButton/ProfileButton";
-import AllCategory from "../features/AllCategory/AllCategory";
+import Logo from  "./Logo"
 
 const Header = () => {
     return (

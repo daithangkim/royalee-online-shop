@@ -1,9 +1,10 @@
 import React from 'react';
-import {Box, Button} from "@mui/material";
-import RoyalShopLogo from './RoyalShopLogo.png'
-const Logo = () => {
+import { Button } from "@mui/material";
+import RoyalShopLogo from '../assets/RoyalShopLogo.png';
+
+const Logo = ({ onLogoClick }) => {
     return (
-        <Box display="flex" alignItems="center">
+        <Button onClick={onLogoClick} sx={{ display: 'flex', alignItems: 'center' }}>
             <img
                 src={RoyalShopLogo}
                 alt="RoyalShop logo"
@@ -11,10 +12,10 @@ const Logo = () => {
                     cursor: 'pointer',
                     height: '50px',
                     width: '100%',
-                    lineHeight:'5'
+                    lineHeight: '5'
                 }}
             />
-        </Box>
+        </Button>
     );
 };
 
