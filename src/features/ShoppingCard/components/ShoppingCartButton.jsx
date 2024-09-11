@@ -7,9 +7,10 @@ const ShoppingCartButton = () => {
         <Button
             sx={{
                 '&:hover': {
-                    backgroundColor: 'rgba(156,121,69,0.85)',
+                    '& .MuiSvgIcon-root': {
+                        fontSize: '2.2rem',
+                    },
                 },
-                // Add any other default styles here if needed
             }}
         >
             <ShoppingCart sx={{ fontSize: '2rem', color: 'white' }} />
