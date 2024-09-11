@@ -6,7 +6,7 @@ import ringDoorbell from './ProductPhotos/ringDoorbell.png';
 import samsungTab8 from './ProductPhotos/SamsungTAb8.png';
 import sonyWH from './ProductPhotos/SonyWH-1000.png';
 
-export const products = [
+export const homeProducts = [
     {
         "id": 4,
         "name": "Ring Video Doorbell Pro 2",
@@ -58,4 +58,4 @@ export const products = [
     }
 ];
 
-export default products;
+export default homeProducts;

@@ -19,6 +19,7 @@ const Contact = () => {
             email,
             message,
         });
+        alert('email sent!')
     };
 
     return (
