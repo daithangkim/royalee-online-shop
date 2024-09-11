@@ -53,6 +53,9 @@ const Main = () => {
                     <Box sx={{padding: '10px'}}>
                         <AdSliderFeature/>
                     </Box>
+
+                    <Typography variant="h4"><br />Products<br/></Typography>
+
                     <Box>
                         <ProductListFeature/>
                     </Box>

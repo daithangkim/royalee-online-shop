@@ -4,7 +4,8 @@ import {Box, Typography} from "@mui/material";
 
 const Footer = () => {
     return (
-        <div>Footer</div>
+        //todo: footer with from when to when created, @royalee est. 2024, Germany
+        <div></div>
     )
 };
 
