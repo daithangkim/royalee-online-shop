@@ -1,14 +1,20 @@
-import { Button, Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
+import { useState } from "react";
+import { Alert, Button, Card, CardActionArea, CardContent, CardMedia, Snackbar } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../redux/cartSlice";
 
 const ProductCard = ({ product }) => {
     const dispatch = useDispatch();
+    const [openSnackbar, setOpenSnackbar] = useState(false);  // State to handle the Snackbar visibility
 
     const handleAddToCart = () => {
         dispatch(addToCart(product));
-        alert(`${product.name} has been added to your cart!`);  // Display alert
+        setOpenSnackbar(true);  // Show the Snackbar when the item is added
+    };
+
+    const handleSnackbarClose = () => {
+        setOpenSnackbar(false);  // Close the Snackbar
     };
 
     return (
@@ -34,6 +40,18 @@ const ProductCard = ({ product }) => {
                     Add to Cart
                 </Button>
             </CardActionArea>
+
+            {/* Snackbar Alert */}
+            <Snackbar
+                open={openSnackbar}
+                autoHideDuration={3000}  // Automatically close after 3 seconds
+                onClose={handleSnackbarClose}
+                anchorOrigin={{ vertical: 'top', horizontal: 'center' }}  // Show it at the top center
+            >
+                <Alert onClose={handleSnackbarClose} severity="info">
+                    {`${product.name} has been added to your cart!`}
+                </Alert>
+            </Snackbar>
         </Card>
     );
 };

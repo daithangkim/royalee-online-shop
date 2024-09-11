@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from "@mui/material";
 import RoyalShopLogo from '../../assets/Logo/RoyalShopLogo.png';
-import RoyalShopLogo2 from '../../assets/Logo/img.png';
 
 
 const LogoFeature = ({ onLogoClick }) => {
@@ -12,8 +11,9 @@ const LogoFeature = ({ onLogoClick }) => {
                 alt="RoyalShop logo"
                 style={{
                     cursor: 'pointer',
-                    height: '50px',
-                    width: '100%',
+                    height: 'auto',
+                    width: '20vw',
+                    maxWidth: '10rem',
                     lineHeight: '5'
                 }}
             />
