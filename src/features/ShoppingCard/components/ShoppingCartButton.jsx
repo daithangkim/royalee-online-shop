@@ -5,6 +5,7 @@ import { Button } from '@mui/material';
 const ShoppingCartButton = () => {
     return (
         <Button
+            size={'small'}
             sx={{
                 '&:hover': {
                     '& .MuiSvgIcon-root': {

@@ -1,9 +1,9 @@
 import React from 'react'
 import ProfileButton from "./ProfileButton/ProfileButton";
 
-const ProfileFeature = () => {
+const ProfileFeature = ({sx}) => {
     return (
-        <ProfileButton/>
+        <ProfileButton sx={sx}/>
     )
 }
 export default ProfileFeature
