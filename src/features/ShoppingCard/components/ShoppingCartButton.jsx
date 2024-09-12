@@ -2,7 +2,7 @@ import React from 'react';
 import { ShoppingCart } from '@mui/icons-material';
 import { Button } from '@mui/material';
 
-const ShoppingCartButton = () => {
+const ShoppingCartButton = ({ onClick }) => {
     return (
         <Button
             size={'small'}
@@ -13,6 +13,7 @@ const ShoppingCartButton = () => {
                     },
                 },
             }}
+            onClick={onClick}
         >
             <ShoppingCart sx={{ fontSize: '2rem', color: 'white' }} />
         </Button>

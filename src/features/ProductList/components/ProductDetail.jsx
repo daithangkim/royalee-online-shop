@@ -1,13 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import homeProducts from "../../../assets/Product/ProductDataBase";
+import { homeProducts, bestsellerProducts } from "../../../assets/Product/ProductDataBase";
 
-//merging entire database of products
-const products = homeProducts;
+// Combine all product arrays into one
+const allProducts = [...homeProducts, ...bestsellerProducts];
 
 const ProductDetails = () => {
     const { id } = useParams();
-    const product = products.find(p => p.id === parseInt(id));
+    const product = allProducts.find(p => p.id === parseInt(id));
 
     if (!product) {
         return <div>Product not found</div>;

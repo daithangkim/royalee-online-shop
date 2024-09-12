@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Alert, Button, Card, CardActionArea, CardContent, CardMedia, Snackbar } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../../redux/cartSlice";
+import { addToCart } from "../../ShoppingCard/redux/cartSlice";
 
 const ProductCard = ({ product }) => {
     const dispatch = useDispatch();
