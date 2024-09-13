@@ -17,6 +17,7 @@ const ShoppingCartPage = ({ open, onClose }) => {
                 Shopping Cart
             </Typography>
             <List>
+                <Typography>Under Construction</Typography>
                 <ListItem>
                     <ListItemText primary="Item 1" secondary="$10.00" />
                 </ListItem>
