@@ -1,5 +1,5 @@
 import React from 'react'
-import ProfileButton from "./ProfileButton/ProfileButton";
+import ProfileButton from "./components/ProfileButton";
 
 const ProfileFeature = ({sx}) => {
     return (

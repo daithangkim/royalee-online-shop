@@ -2,7 +2,7 @@ import React from "react";
 import {AppBar, Box, Toolbar, useMediaQuery} from "@mui/material";
 import SearchBar from "../features/SearchBar";
 import ShoppingCartFeature from "../features/ShoppingCard";
-import ProfileButton from "../features/Profile/ProfileButton/ProfileButton";
+import ProfileButton from "../features/Profile/components/ProfileButton";
 import LogoFeature from "../features/Logo/LogoFeature";
 import './header.css';
 

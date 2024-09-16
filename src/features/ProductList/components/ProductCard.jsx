@@ -3,18 +3,19 @@ import { Alert, Button, Card, CardActionArea, CardContent, CardMedia, Snackbar }
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../ShoppingCard/redux/cartSlice";
+import AddToCartButton from "./AddToCartButton";  // Reusable AddToCartButton component
 
 const ProductCard = ({ product }) => {
     const dispatch = useDispatch();
-    const [openSnackbar, setOpenSnackbar] = useState(false);  // State to handle the Snackbar visibility
+    const [openSnackbar, setOpenSnackbar] = useState(false);
 
     const handleAddToCart = () => {
         dispatch(addToCart(product));
-        setOpenSnackbar(true);  // Show the Snackbar when the item is added
+        setOpenSnackbar(true);
     };
 
     const handleSnackbarClose = () => {
-        setOpenSnackbar(false);  // Close the Snackbar
+        setOpenSnackbar(false);
     };
 
     return (
@@ -25,7 +26,6 @@ const ProductCard = ({ product }) => {
                 alt={product.name}
                 height="250"
             />
-
             <CardContent>
                 <h2>{product.name}</h2>
                 <h3>{product.price}</h3>
@@ -36,17 +36,16 @@ const ProductCard = ({ product }) => {
                 <Button component={Link} to={`/product/${product.id}`}>
                     Details
                 </Button>
-                <Button onClick={handleAddToCart}>
-                    Add to Cart
-                </Button>
+
+                {/* Add To Cart Button */}
+                <AddToCartButton onAddToCart={handleAddToCart} />
             </CardActionArea>
 
-            {/* Snackbar Alert */}
             <Snackbar
                 open={openSnackbar}
-                autoHideDuration={3000}  // Automatically close after 3 seconds
+                autoHideDuration={3000}
                 onClose={handleSnackbarClose}
-                anchorOrigin={{ vertical: 'top', horizontal: 'center' }}  // Show it at the top center
+                anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
             >
                 <Alert onClose={handleSnackbarClose} severity="info">
                     {`${product.name} has been added to your cart!`}
