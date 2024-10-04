@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, {memo, useState} from "react";
 import { AppBar, Box, Tab, Tabs, Typography, useMediaQuery } from "@mui/material";
 import AdSliderFeature from "../features/AdSlider/AdSlider";
 import ProductListFeature from "../features/ProductList";
 import ContactFeature from "../features/Contact/Contact";
+import Footer from "./Footer";
 
 // CustomTabPanel Component
-const CustomTabPanel = ({ value, index, children }) => {
+//use of memo to prevent unnecessary re-renders
+const CustomTabPanel = memo(({ value, index, children }) => {
     const isSmallScreen = useMediaQuery('(max-width: 32rem)');
     return (
         <div role="tabpanel" hidden={value !== index} id={`tabpanel-${index}`} aria-labelledby={`tab-${index}`}>
@@ -16,7 +18,7 @@ const CustomTabPanel = ({ value, index, children }) => {
             )}
         </div>
     );
-};
+});
 
 const Main = () => {
     const [tabIndex, setTabIndex] = useState(0);
@@ -82,6 +84,10 @@ const Main = () => {
                 <CustomTabPanel value={tabIndex} index={3}>
                     <ContactFeature />
                 </CustomTabPanel>
+
+                <Box sx={{ flexShrink: 0 }}>
+                    <Footer />
+                </Box>
             </Box>
         </div>
     );
