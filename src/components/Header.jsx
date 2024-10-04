@@ -1,10 +1,11 @@
 import React from "react";
 import {AppBar, Box, Toolbar, useMediaQuery} from "@mui/material";
 import SearchBar from "../features/SearchBar";
-import ShoppingCartFeature from "../features/ShoppingCard";
 import ProfileButton from "../features/Profile/components/ProfileButton";
 import LogoFeature from "../features/Logo/LogoFeature";
 import './header.css';
+import ShoppingCart from "../features/ShopCart/components/ShoppingCart";
+import ShoppingCartFeature from "../features/ShopCart";
 
 
 const Header = () => {

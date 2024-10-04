@@ -7,7 +7,7 @@ const ProfileButton = () => {
             <Avatar sx={{ bgcolor: '#9c7945',
                 '&:hover': {
                     backgroundColor: 'rgba(156,121,69,0.85)',
-                }}}>DT</Avatar>
+                }}}></Avatar>
         </Button>
     );
 }

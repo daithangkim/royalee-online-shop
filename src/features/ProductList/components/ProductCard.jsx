@@ -1,21 +1,22 @@
+// features/ProductList/ProductCard.jsx
 import { useState } from "react";
 import { Alert, Button, Card, CardActionArea, CardContent, CardMedia, Snackbar } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../ShoppingCard/redux/cartSlice";
-import AddToCartButton from "./AddToCartButton";  // Reusable AddToCartButton component
+import AddToCartButton from "./AddToCartButton";
+import {addToCart} from "../../../redux/slices/cartSlice";  // A separate reusable button component
 
 const ProductCard = ({ product }) => {
     const dispatch = useDispatch();
-    const [openSnackbar, setOpenSnackbar] = useState(false);
+    const [openSnackbar, setOpenSnackbar] = useState(false); // Snackbar state to show confirmation
 
     const handleAddToCart = () => {
-        dispatch(addToCart(product));
-        setOpenSnackbar(true);
+        dispatch(addToCart(product)); // Dispatch the addToCart action
+        setOpenSnackbar(true); // Show the Snackbar when an item is added
     };
 
     const handleSnackbarClose = () => {
-        setOpenSnackbar(false);
+        setOpenSnackbar(false); // Close Snackbar after a timeout or manually
     };
 
     return (

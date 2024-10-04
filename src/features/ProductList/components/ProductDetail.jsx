@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { addToCart } from "../../ShoppingCard/redux/cartSlice";  // Assuming this is the path to your cart slice
 import { homeProducts, bestsellerProducts } from "../../../assets/Product/ProductDataBase";
 import AddToCartButton from "./AddToCartButton";
-import {Alert, Snackbar} from "@mui/material";  // Import the reusable AddToCartButton
+import {Alert, Snackbar} from "@mui/material";
+import {addToCart} from "../../../redux/slices/cartSlice";  // Import the reusable AddToCartButton
 
 // Combine all product arrays into one
 const allProducts = [...homeProducts, ...bestsellerProducts];

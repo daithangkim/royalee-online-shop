@@ -1,9 +1,0 @@
-.Cart {
-    width: 10rem;
-}
-
-@media (max-width: 32rem) {
-    .Cart {
-        width: 100%;
-    }
-}
