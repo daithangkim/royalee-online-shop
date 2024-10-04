@@ -4,7 +4,6 @@ import SearchBar from "../features/SearchBar";
 import ProfileButton from "../features/Profile/components/ProfileButton";
 import LogoFeature from "../features/Logo/LogoFeature";
 import './header.css';
-import ShoppingCart from "../features/ShopCart/components/ShoppingCart";
 import ShoppingCartFeature from "../features/ShopCart";
 
 

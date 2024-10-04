@@ -8,8 +8,9 @@ const ShoppingCartButton = ({ onClick, itemsCount }) => {
 
     return (
         <Button
-            size={'small'}
+            size="small"  // Adjust size if needed
             sx={{
+                position: 'relative',
                 '&:hover': {
                     '& .MuiSvgIcon-root': {
                         fontSize: '2.2rem',
@@ -17,11 +18,12 @@ const ShoppingCartButton = ({ onClick, itemsCount }) => {
                 },
             }}
             onClick={onClick}
+            aria-label="Shopping Cart"  // Accessibility
         >
             {/* Badge to display the item count */}
             <Badge
                 badgeContent={displayCount}
-                color="secondary"
+                color="error"
                 showZero
                 overlap="circular"
             >

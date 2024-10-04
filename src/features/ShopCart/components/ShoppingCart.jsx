@@ -28,8 +28,8 @@ const ShoppingCart = ({open, onClose}) => {
                 <Typography variant="h6" gutterBottom>
                     Shopping Cart
                 </Typography>
-
-                {cartItems.length === 0 ? (<Typography>Your cart is empty</Typography>) :
+                {
+                    cartItems.length === 0 ? (<Typography>Your cart is empty</Typography>) :
                     (<List>
                         {cartItems.map((item) => (<ListItem key={item.id} divider>
                             <ListItemText
@@ -44,7 +44,8 @@ const ShoppingCart = ({open, onClose}) => {
                                 Remove
                             </Button>
                         </ListItem>))}
-                    </List>)}
+                    </List>)
+                }
             </div>
         </Drawer>
     );
