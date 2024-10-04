@@ -18,7 +18,7 @@ const ShoppingCartButton = ({ onClick, itemsCount }) => {
                 },
             }}
             onClick={onClick}
-            aria-label="Shopping Cart"  // Accessibility
+            aria-label="Shopping Cart"
         >
             {/* Badge to display the item count */}
             <Badge

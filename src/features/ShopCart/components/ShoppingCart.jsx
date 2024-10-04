@@ -26,7 +26,7 @@ const ShoppingCart = ({open, onClose}) => {
                     <CloseIcon/>
                 </IconButton>
                 <Typography variant="h6" gutterBottom>
-                    Shopping Cart
+                    My Orders
                 </Typography>
                 {
                     cartItems.length === 0 ? (<Typography>Your cart is empty</Typography>) :
