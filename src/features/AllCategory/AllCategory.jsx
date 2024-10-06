@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button, Menu, MenuItem } from '@mui/material';
 import {ArrowDropDown} from "@mui/icons-material";
 import categories from "./AllCategoryData";
+import {Link} from "react-router-dom";
 
 const AllCategory = () => {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -43,7 +44,7 @@ const AllCategory = () => {
                     }
                 }}>
                 {categories.map((category, index) => (
-                    <MenuItem key={index} onClick={handleClose}>
+                    <MenuItem key={index} onClick={handleClose} component={Link} to='/under-construction'>
                         {category}
                     </MenuItem>
                 ))}
