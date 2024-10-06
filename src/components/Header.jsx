@@ -1,7 +1,7 @@
 import React from "react";
 import {AppBar, Box, Toolbar, useMediaQuery} from "@mui/material";
 import SearchBar from "../features/SearchBar";
-import ProfileButton from "../features/Profile/components/ProfileButton";
+import Index from "../features/Profile/components";
 import LogoFeature from "../features/Logo/LogoFeature";
 import './header.css';
 import ShoppingCartFeature from "../features/ShopCart";
@@ -17,7 +17,7 @@ const Header = () => {
                     <SearchBar/>
                 </Box>
                 <Box sx={{flexBasis: '8.5rem', minWidth: '8.5rem'}}>
-                    <ProfileButton/>
+                    <Index/>
                     <ShoppingCartFeature/>
                 </Box>
             </Toolbar>

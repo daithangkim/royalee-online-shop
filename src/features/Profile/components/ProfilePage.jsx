@@ -1,8 +1,12 @@
-import React from 'react'
+import {useSelector} from "react-redux";
 
 const ProfilePage = () => {
+    const isLoggedIn = useSelector((state)=>state.auth.isLoggedIn)
+
     return (
-        <h1>ProfilePage</h1>
+        <div>
+            {isLoggedIn && 'Welcome back !'}
+        </div>
     )
 }
 export default ProfilePage

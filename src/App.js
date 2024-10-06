@@ -8,6 +8,9 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import ProductDetails from "./features/ProductList/components/ProductDetail";
 import CategoryPage from "./features/AllCategory/CategoryPage";
 import ProfilePage from "./features/Profile/components/ProfilePage";
+import Register from "./features/Authentication/Register";
+import Login from "./features/Authentication/Login";
+
 
 function App() {
     return (
@@ -19,7 +22,9 @@ function App() {
                         <Route path="/" element={<Main/>}/>
                         <Route path="/product/:id" element={<ProductDetails/>}/>
                         <Route path="/under-construction" element={<CategoryPage />} />
-                        <Route path="/user" element={<ProfilePage />} />
+                        <Route path="/profilePage" element={<ProfilePage />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
                     </Routes>
                 </div>
             </Router>
