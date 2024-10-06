@@ -8,7 +8,7 @@ const ShoppingCartButton = ({ onClick, itemsCount }) => {
 
     return (
         <Button
-            size="small"  // Adjust size if needed
+            size="small"
             sx={{
                 position: 'relative',
                 '&:hover': {

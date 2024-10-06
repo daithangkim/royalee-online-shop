@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Box, Button, TextField, Typography, MenuItem, Select, FormControl, InputLabel } from '@mui/material';
+import { Box, Button, TextField, Typography, MenuItem, Select, FormControl, InputLabel, Snackbar, Alert } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
 
 const Contact = () => {
     const [contactReason, setContactReason] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [openSnackbar, setOpenSnackbar] = useState(false); // State for Snackbar notification
 
     const handleContactReasonChange = (event) => {
         setContactReason(event.target.value);
@@ -19,7 +21,11 @@ const Contact = () => {
             email,
             message,
         });
-        alert('email sent!')
+        setOpenSnackbar(true);
+    };
+
+    const handleSnackbarClose = () => {
+        setOpenSnackbar(false);
     };
 
     return (
@@ -70,10 +76,22 @@ const Contact = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                 />
-                <Button type="submit" variant="contained" color="primary" sx={{ marginTop: 2 }}>
+                <Button type="submit" variant="contained" color="primary" sx={{ marginTop: 2 }} endIcon={<SendIcon />}>
                     Send
                 </Button>
             </form>
+
+            {/* Snackbar for notifications */}
+            <Snackbar
+                open={openSnackbar}
+                autoHideDuration={3000}
+                onClose={handleSnackbarClose}
+                anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+            >
+                <Alert onClose={handleSnackbarClose} severity="success">
+                    Your message has been sent successfully!
+                </Alert>
+            </Snackbar>
         </Box>
     );
 };

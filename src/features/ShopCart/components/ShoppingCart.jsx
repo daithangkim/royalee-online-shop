@@ -36,9 +36,9 @@ const ShoppingCart = ({open, onClose}) => {
                                 primary={item.name}
                                 secondary={`Quantity: ${item.quantity} | Price: ${item.price}`}
                             />
+
                             <Button
                                 variant="contained"
-                                color="secondary"
                                 onClick={() => handleRemoveFromCart(item)}
                             >
                                 Remove

@@ -1,9 +1,12 @@
 import { Button } from "@mui/material";
 
-// Reusable AddToCartButton component
 const AddToCartButton = ({ onAddToCart }) => {
     return (
-        <Button onClick={onAddToCart} color="primary">
+        <Button
+            onClick={onAddToCart}
+            variant="outlined"
+            sx={{ margin: '16px' }}
+        >
             Add to Cart
         </Button>
     );
