@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProfilePage = () => {
     return (
-        <div>ProfilePage</div>
+        <h1>ProfilePage</h1>
     )
 }
 export default ProfilePage

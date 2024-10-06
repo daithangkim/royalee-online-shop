@@ -1,11 +1,12 @@
 import React from 'react';
 import { Button } from "@mui/material";
 import RoyalShopLogo from '../../assets/Logo/RoyalShopLogo.png';
+import {Link} from "react-router-dom";
 
 
 const LogoFeature = ({ onLogoClick }) => {
     return (
-        <Button onClick={onLogoClick} sx={{ display: 'flex', alignItems: 'center' }}>
+        <Button component={Link} to='/' onClick={onLogoClick} sx={{ display: 'flex', alignItems: 'center'}}>
             <img
                 src={RoyalShopLogo}
                 alt="RoyalShop logo"

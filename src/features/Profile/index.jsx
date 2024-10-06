@@ -3,7 +3,7 @@ import ProfileButton from "./components/ProfileButton";
 
 const ProfileFeature = ({sx}) => {
     return (
-        <ProfileButton sx={sx}/>
+        <ProfileButton/>
     )
 }
 export default ProfileFeature
