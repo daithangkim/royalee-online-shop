@@ -22,7 +22,7 @@ const CustomTabPanel = memo(({ value, tabKey, children }) => {
 
 const Main = () => {
     const dispatch = useDispatch();
-    const currentTab = useSelector((state) => state.tab.currentTab);
+    const currentTab = useSelector((state) => state.main.currentTab);
 
     const handleTabChange = (event, newValue) => {
         dispatch(setTab(newValue));
