@@ -1,17 +1,17 @@
-import React, {memo, useState} from "react";
+import React, { memo } from "react";
 import { AppBar, Box, Tab, Tabs, Typography, useMediaQuery } from "@mui/material";
 import AdSliderFeature from "../features/AdSlider/AdSlider";
 import ProductListFeature from "../features/ProductList";
 import ContactFeature from "../features/Contact/Contact";
 import Footer from "./Footer";
+import { useDispatch, useSelector } from "react-redux";
+import {setTab} from "../redux/slices/tabSlice";
 
-// CustomTabPanel Component
-//use of memo to prevent unnecessary re-renders
-const CustomTabPanel = memo(({ value, index, children }) => {
+const CustomTabPanel = memo(({ value, tabKey, children }) => {
     const isSmallScreen = useMediaQuery('(max-width: 32rem)');
     return (
-        <div role="tabpanel" hidden={value !== index} id={`tabpanel-${index}`} aria-labelledby={`tab-${index}`}>
-            {value === index && (
+        <div role="tabpanel" hidden={value !== tabKey} id={`tabpanel-${tabKey}`} aria-labelledby={`tab-${tabKey}`}>
+            {value === tabKey && (
                 <Box p={3} sx={{ fontSize: isSmallScreen ? 'xx-small' : 'unset' }}>
                     {children}
                 </Box>
@@ -21,10 +21,11 @@ const CustomTabPanel = memo(({ value, index, children }) => {
 });
 
 const Main = () => {
-    const [tabIndex, setTabIndex] = useState(0);
+    const dispatch = useDispatch();
+    const currentTab = useSelector((state) => state.tab.currentTab);
 
     const handleTabChange = (event, newValue) => {
-        setTabIndex(newValue);
+        dispatch(setTab(newValue));
     };
 
     return (
@@ -38,50 +39,45 @@ const Main = () => {
                     flex: 1,
                 }}
             >
-                {/* Top AppBar with Tabs */}
+
                 <AppBar position="static" sx={{ backgroundColor: 'rgb(5,20,54)' }}>
                     <Tabs
-                        value={tabIndex}
+                        value={currentTab}
                         onChange={handleTabChange}
                         sx={{ display: 'flex', justifyContent: 'space-around' }}
                         TabIndicatorProps={{ style: { backgroundColor: '#9c7945' } }}>
-                        {["Home", "Bestseller", "New Products", "Contact"].map((label, index) => (
-                            <Tab key={index} label={label} sx={{ fontSize: '1rem', color: '#9c7945' }} />
-                        ))}
+                        <Tab label="Home" value="home" sx={{ fontSize: '1rem', color: '#9c7945' }} />
+                        <Tab label="Bestseller" value="bestseller" sx={{ fontSize: '1rem', color: '#9c7945' }} />
+                        <Tab label="New Products" value="newProducts" sx={{ fontSize: '1rem', color: '#9c7945' }} />
+                        <Tab label="Contact" value="contact" sx={{ fontSize: '1rem', color: '#9c7945' }} />
                     </Tabs>
                 </AppBar>
 
-                {/* Home tab */}
-                <CustomTabPanel value={tabIndex} index={0}>
+                <CustomTabPanel value={currentTab} tabKey="home">
                     <Box sx={{ padding: '10px' }}>
                         <AdSliderFeature />
                     </Box>
-
                     <Typography variant="h4"><br />Products<br /></Typography>
-
                     <Box>
-                        <ProductListFeature tabIndex={tabIndex} />
+                        <ProductListFeature tabKey="home" />
                     </Box>
                 </CustomTabPanel>
 
-                {/* Bestseller tab */}
-                <CustomTabPanel value={tabIndex} index={1}>
+                <CustomTabPanel value={currentTab} tabKey="bestseller">
                     <Typography variant="h4">Bestseller</Typography>
                     <Box>
-                        <ProductListFeature tabIndex={tabIndex} />
+                        <ProductListFeature tabKey="bestseller" />
                     </Box>
                 </CustomTabPanel>
 
-                {/* New Products tab */}
-                <CustomTabPanel value={tabIndex} index={2}>
+                <CustomTabPanel value={currentTab} tabKey="newProducts">
                     <Typography variant="h4">New Products</Typography>
                     <Box>
-                        <ProductListFeature tabIndex={tabIndex} />
+                        <ProductListFeature tabKey="newProducts" />
                     </Box>
                 </CustomTabPanel>
 
-                {/* Contact tab */}
-                <CustomTabPanel value={tabIndex} index={3}>
+                <CustomTabPanel value={currentTab} tabKey="contact">
                     <ContactFeature />
                 </CustomTabPanel>
 

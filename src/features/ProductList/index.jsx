@@ -3,17 +3,17 @@ import ProductList from "./components/ProductList";
 import {bestsellerProducts, homeProducts} from "../../assets/Product/ProductDataBase";
 
 
-const ProductListFeature = ({ tabIndex }) => {
+const ProductListFeature = ({ tabKey }) => {
     let products = [];
 
-    switch (tabIndex) {
-        case 0:
+    switch (tabKey) {
+        case 'home':
             products = homeProducts.concat(bestsellerProducts);
             break;
-        case 1:
+        case 'bestseller':
             products = bestsellerProducts;
             break;
-        case 2:
+        case 'newProducts':
             //todo: new 'ProductDataBase' for new
             products = homeProducts;
         default:
