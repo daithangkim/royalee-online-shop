@@ -7,6 +7,7 @@ import {clearCart, removeFromCart} from "../../../redux/slices/cartSlice";
 const ShoppingCart = ({open, onClose}) => {
     //get cart items from state
     const cartItems = useSelector((state) => state.cart.items);
+    const totalSum = useSelector((state) => state.cart.totalSum);
     const dispatch = useDispatch();
 
 // Dispatch remove action
@@ -16,7 +17,7 @@ const ShoppingCart = ({open, onClose}) => {
 
     //clear entire cart
     const handleClearCart = () => {
-        dispatch(clearCart)
+        dispatch(clearCart())
     }
 
     return (
@@ -30,22 +31,34 @@ const ShoppingCart = ({open, onClose}) => {
                 </Typography>
                 {
                     cartItems.length === 0 ? (<Typography>Your cart is empty</Typography>) :
-                    (<List>
-                        {cartItems.map((item) => (<ListItem key={item.id} divider>
-                            <ListItemText
-                                primary={item.name}
-                                secondary={`Quantity: ${item.quantity} | Price: ${item.price}`}
-                            />
+                        (<List>
+                            {cartItems.map((item) => (<ListItem key={item.id} divider>
+                                <ListItemText
+                                    primary={item.name}
+                                    secondary={`Quantity: ${item.quantity} | Price: ${item.price}`}
+                                />
 
-                            <Button
-                                variant="contained"
-                                onClick={() => handleRemoveFromCart(item)}
-                            >
-                                Remove
-                            </Button>
-                        </ListItem>))}
-                    </List>)
+                                <Button variant="contained" onClick={() => handleRemoveFromCart(item)}>
+                                    Remove
+                                </Button>
+                            </ListItem>))}
+                        </List>)
                 }
+
+                <Typography variant="h7">
+                    Total: ${totalSum.toFixed(2)} {/* Format total to two decimal places */}
+                </Typography>
+
+                <br />
+                <Button>
+                    <h4>Pay Now</h4>
+                </Button>
+
+                <Button onClick={() => handleClearCart()}>
+                    <h4>Remove all</h4>
+                </Button>
+
+
             </div>
         </Drawer>
     );
