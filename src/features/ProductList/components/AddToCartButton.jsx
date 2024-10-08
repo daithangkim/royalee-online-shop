@@ -4,8 +4,12 @@ const AddToCartButton = ({ onAddToCart }) => {
     return (
         <Button
             onClick={onAddToCart}
-            variant="outlined"
-            sx={{ margin: '16px' }}
+            variant="contained"
+            sx={{ margin: '20px',
+                bgcolor: '#9c7945',
+                '&:hover': {
+                    backgroundColor: 'rgba(156,121,69,0.85)',
+                }}}
         >
             Add to Cart
         </Button>
