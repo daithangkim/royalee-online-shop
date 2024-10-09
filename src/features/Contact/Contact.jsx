@@ -21,6 +21,10 @@ const Contact = () => {
             email,
             message,
         });
+        setContactReason('')
+        setName('')
+        setEmail('')
+        setMessage('')
         setOpenSnackbar(true);
     };
 
