@@ -6,7 +6,7 @@ import ringDoorbell from './ProductPhotos/ringDoorbell.png';
 import samsungTab8 from './ProductPhotos/SamsungTAb8.png';
 import sonyWH from './ProductPhotos/SonyWH-1000.png';
 
-export const homeProducts = [
+export const bestsellerProducts = [
     {
         "id": 1,
         "name": "Ring Video Doorbell Pro 2",
@@ -58,7 +58,7 @@ export const homeProducts = [
     }
 ];
 
-export const bestsellerProducts = [
+export const homeProducts = [
     {
         "id": 10,
         "name": "Keurig K-Elite Coffee Maker",
